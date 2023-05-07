@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Cadastro";
+}
+
+<div align="center">
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["MensagemErro"]
+        </div>
+    }
+
+    <div class="box-login">
+        <div>
+            <form action="/Login/Login" method="post"> @* colocar a rota certa *@
+                <label>Adicione a descrição</label>
+                <div class="form-group box">
+                    <input type="text" class="form-control" id="descricao" name="descricao">
+                </div>
+                <div class="form-group box">
+                    <label style="margin-top: 0.8em;">Ativar notificação</label>
+                    <input type="checkbox" class="checkbox" id="notificacao" name="notificacao">
+                </div>
+                <label>Selecione a data de vencimento</label>
+                <div class="form-group box">
+                    <input type="date" class="form-control" id="vencimento" name="vencimento">
+                </div>
+                <label>Digite o valor</label>
+                <div class="form-group box">
+                    <input type="number" class="form-control" id="valor" name="valor">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary button">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .logo {
+        margin-bottom: 3em;
+        width: 20em;
+    }
+
+    .box-login {
+        margin-top: 10em;
+        width: 20em;
+    }
+
+    .box-submit {
+        display: flex;
+        justify-content: left;
+    }
+
+    .button {
+        background-color: #000000;
+        color: #FFFF;
+    }
+
+        .button:hover {
+            border-color: #000000;
+            background-color: #FFFF;
+            color: #000000;
+        }
+
+        .button:focus {
+            border-color: #000000;
+            background-color: #FFFF;
+            color: #000000;
+        }
+
+    .box {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        margin-right: 0.5em;
+        height: 2em;
+    }
+
+    .checkbox {
+        width: 3em !important;
+        margin-left: 1em;
+    }
+</style>

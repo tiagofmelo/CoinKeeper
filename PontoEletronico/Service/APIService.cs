@@ -10,48 +10,48 @@ namespace PontoEletronico.Service
     {
         private static string url = System.Configuration.ConfigurationManager.AppSettings["urlApi"];
 
-        public static HttpResponseMessage GetAPI(TokenModel tokenModel, string endPoint)
-        {
-            HttpClient httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.accessToken);
-            HttpResponseMessage response = httpClient.GetAsync(url + endPoint).Result;
+        //public static HttpResponseMessage GetAPI(TokenModel tokenModel, string endPoint)
+        //{
+        //    HttpClient httpClient = new HttpClient();
+        //    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.accessToken);
+        //    HttpResponseMessage response = httpClient.GetAsync(url + endPoint).Result;
 
-            return response;
-        }
+        //    return response;
+        //}
 
-        public static HttpResponseMessage PostAPI(object serializeObject, string endPoint)
-        {
-            var json = JsonConvert.SerializeObject(serializeObject);
-            var contentString = new StringContent(json, Encoding.UTF8, "application/json");
+        //public static HttpResponseMessage PostAPI(object serializeObject, string endPoint)
+        //{
+        //    var json = JsonConvert.SerializeObject(serializeObject);
+        //    var contentString = new StringContent(json, Encoding.UTF8, "application/json");
 
-            HttpClient httpClient = new HttpClient();
-            HttpResponseMessage response = httpClient.PostAsync(url + endPoint, contentString).Result;
+        //    HttpClient httpClient = new HttpClient();
+        //    HttpResponseMessage response = httpClient.PostAsync(url + endPoint, contentString).Result;
 
-            return response;
-        }
+        //    return response;
+        //}
 
-        public static HttpResponseMessage PostAPI(TokenModel tokenModel, string endPoint, object serializeObject)
-        {
-            var json = JsonConvert.SerializeObject(serializeObject);
-            var contentString = new StringContent(json, Encoding.UTF8, "application/json");
+        //public static HttpResponseMessage PostAPI(TokenModel tokenModel, string endPoint, object serializeObject)
+        //{
+        //    var json = JsonConvert.SerializeObject(serializeObject);
+        //    var contentString = new StringContent(json, Encoding.UTF8, "application/json");
 
-            HttpClient httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.accessToken);
-            HttpResponseMessage response = httpClient.PostAsync(url + endPoint, contentString).Result;
+        //    HttpClient httpClient = new HttpClient();
+        //    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.accessToken);
+        //    HttpResponseMessage response = httpClient.PostAsync(url + endPoint, contentString).Result;
 
-            return response;
-        }
+        //    return response;
+        //}
 
-        public static HttpResponseMessage PutAPI(TokenModel tokenModel, string endPoint, TimesheetModel serializeObject)
-        {
-            var json = JsonConvert.SerializeObject(serializeObject);
-            var contentString = new StringContent(json, Encoding.UTF8, "application/json");
+        //public static HttpResponseMessage PutAPI(TokenModel tokenModel, string endPoint, TimesheetModel serializeObject)
+        //{
+        //    var json = JsonConvert.SerializeObject(serializeObject);
+        //    var contentString = new StringContent(json, Encoding.UTF8, "application/json");
 
-            HttpClient httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.accessToken);
-            HttpResponseMessage response = httpClient.PutAsync(url + endPoint + "/" + serializeObject.id, contentString).Result;
+        //    HttpClient httpClient = new HttpClient();
+        //    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.accessToken);
+        //    HttpResponseMessage response = httpClient.PutAsync(url + endPoint + "/" + serializeObject.id, contentString).Result;
 
-            return response;
-        }
+        //    return response;
+        //}
     }
 }

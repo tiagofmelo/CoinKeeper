@@ -1,0 +1,119 @@
+﻿@model IEnumerable<PontoEletronico.Models.LancamentoModel>
+
+@{
+    ViewBag.Title = "Lançamento";
+}
+
+<div align="center">
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["MensagemErro"]
+        </div>
+    }
+
+    @using (Html.BeginForm("Cadastro", "Lancamento", FormMethod.Post))
+    {
+        <div class="box-button">
+            <div class="">
+                <button type="submit" class="btn btn-primary button" name="evento" id="1" value="1">Adicionar Crédito</button>
+            </div>
+            <div class="">
+                <button type="submit" class="btn btn-primary button" name="evento" id="2" value="2">Adicionar Débito</button>
+            </div>
+        </div>
+    }
+
+    <table class="table">
+        <tr>
+            <th style="width: 1em;"></th>
+            <th>Descrição</th>
+            <th>Vencimento</th>
+            <th>Valor</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <button class="button-trash">
+                        <span class="glyphicon glyphicon-trash trash"></span>
+                    </button>
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                <td>@Html.DisplayFor(modelItem => item.Vencimento)</td>
+                <td>@Html.DisplayFor(modelItem => item.Valor)</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<style>
+    .box-header {
+        width: 100%;
+        padding-bottom: 5em;
+    }
+
+    .box-img {
+        display: flex;
+        float: left;
+        align-items: baseline;
+    }
+
+    .box-time {
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-button {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50em;
+        padding: 1rem;
+    }
+
+    .button {
+        border-color: #000000;
+        background-color: #FFFF;
+        color: #000000;
+        height: 6em;
+    }
+
+        .button:hover {
+            border-color: #000000;
+            background-color: #000000;
+            color: #FFFF;
+        }
+
+        .button:focus {
+            border-color: #000000;
+            background-color: #FFFF;
+            color: #000000;
+        }
+
+    .table {
+        background: #FFFF;
+        width: 50em;
+    }
+
+    .button-trash {
+        background: transparent;
+        border: none;
+    }
+
+    .trash {
+        color: red;
+    }
+
+</style>
+
+<script>
+
+</script>

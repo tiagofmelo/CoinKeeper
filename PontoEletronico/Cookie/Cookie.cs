@@ -8,46 +8,46 @@ namespace PontoEletronico.Session
 {
     public static class Cookie
     {
-        public static HttpCookie ArmazenaToken(TokenModel tokenModel)
-        {
-            HttpCookie httpCookie = new HttpCookie("tokenModel");
+        //public static HttpCookie ArmazenaToken(TokenModel tokenModel)
+        //{
+        //    HttpCookie httpCookie = new HttpCookie("tokenModel");
 
-            var sessionToken = JsonConvert.SerializeObject(tokenModel);
+        //    var sessionToken = JsonConvert.SerializeObject(tokenModel);
 
-            httpCookie.HttpOnly = true;
-            httpCookie.Value = sessionToken;
+        //    httpCookie.HttpOnly = true;
+        //    httpCookie.Value = sessionToken;
 
-            return httpCookie;
-        }
+        //    return httpCookie;
+        //}
 
-        public static TokenModel RetornaToken(HttpCookie httpCookie)
-        {
-            TokenModel tokenModel = new TokenModel();
+        //public static TokenModel RetornaToken(HttpCookie httpCookie)
+        //{
+        //    TokenModel tokenModel = new TokenModel();
 
-            tokenModel = JsonConvert.DeserializeObject<TokenModel>(httpCookie.Value);
+        //    tokenModel = JsonConvert.DeserializeObject<TokenModel>(httpCookie.Value);
 
-            return tokenModel;
-        }
+        //    return tokenModel;
+        //}
 
-        public static HttpCookie ArmazenaTimesheet(TimesheetModel timesheetModel)
-        {
-            HttpCookie httpCookie = new HttpCookie("timesheetModel");
+        //public static HttpCookie ArmazenaTimesheet(TimesheetModel timesheetModel)
+        //{
+        //    HttpCookie httpCookie = new HttpCookie("timesheetModel");
 
-            var sessionTimesheet = JsonConvert.SerializeObject(timesheetModel);
+        //    var sessionTimesheet = JsonConvert.SerializeObject(timesheetModel);
 
-            httpCookie.HttpOnly = true;
-            httpCookie.Value = sessionTimesheet;
+        //    httpCookie.HttpOnly = true;
+        //    httpCookie.Value = sessionTimesheet;
 
-            return httpCookie;
-        }
+        //    return httpCookie;
+        //}
 
-        public static TimesheetModel RetornaTimesheet(HttpCookie httpCookie)
-        {
-            TimesheetModel timesheetModel = new TimesheetModel();
+        //public static TimesheetModel RetornaTimesheet(HttpCookie httpCookie)
+        //{
+        //    TimesheetModel timesheetModel = new TimesheetModel();
 
-            timesheetModel = JsonConvert.DeserializeObject<TimesheetModel>(httpCookie.Value);
+        //    timesheetModel = JsonConvert.DeserializeObject<TimesheetModel>(httpCookie.Value);
 
-            return timesheetModel;
-        }
+        //    return timesheetModel;
+        //}
     }
 }
