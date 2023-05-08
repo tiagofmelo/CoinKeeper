@@ -9,19 +9,31 @@ namespace PontoEletronico.Controllers
 {
     public class LancamentoController : Controller
     {
-        List<LancamentoModel> lancamentos = new List<LancamentoModel>();
 
         // GET: Lancamento
         public ActionResult Lancamento()
         {
-            LancamentoModel lancamento = new LancamentoModel()
+            List<LancamentoModel> lancamentos = new List<LancamentoModel>
             {
-                Descricao = "Fatura",
-                Vencimento = new DateTime().ToString("d"),
-                Valor = "R$ 999,00"
+                new LancamentoModel()
+                {
+                    Descricao = "Fatura Banco",
+                    Vencimento = "01/06/2023",
+                    Valor = "R$ 800,00"
+                },
+                new LancamentoModel()
+                {
+                    Descricao = "Fatura Internet",
+                    Vencimento = "03/06/2023",
+                    Valor = "R$ 99,00"
+                },
+                new LancamentoModel()
+                {
+                    Descricao = "Telefone",
+                    Vencimento = "10/06/2023",
+                    Valor = "R$ 78,00"
+                }
             };
-
-            lancamentos.Add(lancamento);
 
             return View(lancamentos);
         }

@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using PontoEletronico.Models;
 using Newtonsoft.Json;
-using PontoEletronico.Service;
 
 namespace PontoEletronico.Controllers
 {

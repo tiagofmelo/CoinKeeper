@@ -128,8 +128,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LancamentoModel.cs" />
-    <Compile Include="Service\APIService.cs" />
-    <Compile Include="Cookie\Cookie.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
