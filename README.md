@@ -1,9 +1,11 @@
 Link para clonagem do repositório: https://github.com/tiagofmelo/CoinKeeper
 
 ## Informações de Log-in
-Para realizar o acesso entrar com as credenciais abaixo.
+Para realizar o acesso entrar com as credenciais:
+
 Log-in: user@user.com.br
 Senha: 123456
+
 ### Tela de Log-in:
 ![image](https://user-images.githubusercontent.com/78428504/236720932-43b6d495-394f-4827-bee5-2f431fb921f2.png)
 ### Tela principal com informações referentes aos lançamentos do mês atual:
