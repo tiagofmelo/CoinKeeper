@@ -11,6 +11,5 @@ namespace PontoEletronico.Models
         public string Vencimento { get; set; }
         public string Valor { get; set; }
         public bool Notificacao { get; set; }
-
     }
 }

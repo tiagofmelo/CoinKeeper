@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web.Mvc;
 using Newtonsoft.Json;
 using PontoEletronico.Models;
-using PontoEletronico.Service;
 
 namespace PontoEletronico.Controllers
 {
