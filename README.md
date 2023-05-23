@@ -1,19 +1,7 @@
 <h1 align="center">
   <img src="public/mybills.png"/> 
 </h1>
-
-<h1 align="center">
-  <img src="public/mybills.gif"/> 
-</h1>
-
-## ⚡️ O Projeto
-  My Bills 402 é um aplicativo de controle financeiro que pode ser usado para controlar seus gastos e analizar métricas importantes sobre seu consumo.
-## 🎯 Funcionalidades
- - [x] - Login social com o Google 
- - [x] - CRUD de transações
- - [x] - Listagem de transações
- - [x] - Dashboard com métricas e gráficos
-  
+ 
 ## 🖥️ Tecnologias Usadas
  - [ReactJS](https://reactjs.org/)
  - [NextJS](https://nextjs.org/)
