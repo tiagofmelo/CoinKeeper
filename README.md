@@ -8,7 +8,7 @@
  - [Firebase](https://firebase.google.com/?hl=pt)
  - [ChakraUI](https://chakra-ui.com/)
 
-## ⚙️ Instale antes de tentar executar o projeto)
+## ⚙️ Instale antes de tentar executar o projeto
  - [Yarn](https://yarnpkg.com/)
  
 ## 🚀️ Executando o projeto
@@ -16,7 +16,7 @@
 1. Clone o repositório: 
 
 ```bash
-git clone https://github.com/S204-Inatel-2022-1/myBills-402.git && cd myBills-402
+git clone https://github.com/tiagofmelo/CoinKeeper.git
 ```
 2. Instale todas as depencências
 
