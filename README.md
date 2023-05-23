@@ -1,18 +1,54 @@
-Link para clonagem do repositório: https://github.com/tiagofmelo/CoinKeeper
+<h1 align="center">
+  <img src="public/mybills.png"/> 
+</h1>
 
-## Informações de Log-in
-Para realizar o acesso entrar com as credenciais:
+<h1 align="center">
+  <img src="public/mybills.gif"/> 
+</h1>
 
-Log-in: user@user.com.br
-Senha: 123456
+## ⚡️ O Projeto
+  My Bills 402 é um aplicativo de controle financeiro que pode ser usado para controlar seus gastos e analizar métricas importantes sobre seu consumo.
+## 🎯 Funcionalidades
+ - [x] - Login social com o Google 
+ - [x] - CRUD de transações
+ - [x] - Listagem de transações
+ - [x] - Dashboard com métricas e gráficos
+  
+## 🖥️ Tecnologias Usadas
+ - [ReactJS](https://reactjs.org/)
+ - [NextJS](https://nextjs.org/)
+ - [Firebase](https://firebase.google.com/?hl=pt)
+ - [ChakraUI](https://chakra-ui.com/)
 
-### Tela de Log-in:
-![image](https://user-images.githubusercontent.com/78428504/236720932-43b6d495-394f-4827-bee5-2f431fb921f2.png)
-### Tela principal com informações referentes aos lançamentos do mês atual:
-![image](https://user-images.githubusercontent.com/78428504/236720948-9454402b-a2f0-4d80-90c6-328b924a2178.png)
-### Tela de lançamentos, com as listagens dos lançamentos:
-![image](https://user-images.githubusercontent.com/78428504/236720955-639c0175-7635-4cee-98c7-4d2662f8953d.png)
-### Tela de cadastro dos lançamentos:
-![image](https://user-images.githubusercontent.com/78428504/236720965-c04e4570-1002-49af-97ce-57a7f18aebf6.png)
-## Informações para build da aplicação
-Para realizar o build da aplicação, é somente necessário clonar o repositório na máquina local, e abrir o projeto com o VisualStudio.
+## ⚙️ Instale antes de tentar executar o projeto)
+ - [Yarn](https://yarnpkg.com/)
+ 
+## 🚀️ Executando o projeto
+
+1. Clone o repositório: 
+
+```bash
+git clone https://github.com/S204-Inatel-2022-1/myBills-402.git && cd myBills-402
+```
+2. Instale todas as depencências
+
+```bash
+yarn
+```
+3. Rode o aplicativo
+```bash
+yarn dev
+```
+4. Abra [localhost:3000](http://localhost:3000) para ver o app funcionando
+
+
+## 🌡️ Testes 
+
+1. Testes unitários 
+```bash
+yarn test
+``` 
+2. Testes E2E (Cypress)
+```bash 
+yarn test:e2e
+``` 
