@@ -82,8 +82,7 @@ export function CategoryChart({ isDeposit }: CategoryChartProps) {
       flexDir="column"
       p="1rem"
       alignItems="center"
-      justifyContent="center"
-    >
+      justifyContent="center" >
       <Text fontWeight="semibold" color="#414141">
         {isDeposit ? "Depósitos" : "Retiradas"}
       </Text>
@@ -94,14 +93,12 @@ export function CategoryChart({ isDeposit }: CategoryChartProps) {
             innerRadius={60}
             outerRadius={90}
             labelLine={false}
-            dataKey="value"
-          >
+            dataKey="value" >
             <Tooltip />
             {chartData.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
+                fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
           <Legend
@@ -116,8 +113,7 @@ export function CategoryChart({ isDeposit }: CategoryChartProps) {
                 type: "square",
                 value: `${item.label} (${item.percent.toFixed(0)}%)`,
                 color: COLORS[index % COLORS.length],
-              }))}
-          />
+              }))} />
         </PieChart>
       </ResponsiveContainer>
     </GridItem>

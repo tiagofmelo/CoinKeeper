@@ -123,14 +123,12 @@ export const TransactionsPage: NextPage = () => {
       <MobileMenu onClose={handleCloseMobileMenu} isOpen={isMobileMenuOpen} />
       <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
-        onClose={handleClosingWithReloading}
-      />
+        onClose={handleClosingWithReloading} />
       {transactionToEdit && (
         <EditTransactionModal
           isOpen={isEditTransactionModalOpen}
           onClose={handleClosingWithTransactionClean}
-          transaction={transactionToEdit}
-        />
+          transaction={transactionToEdit} />
       )}
       <Container marginTop="10px" maxW="2x1" px={["1rem", "1rem", "8rem"]}>
         <Flex justifyContent="space-between" mb="2rem">
@@ -140,8 +138,7 @@ export const TransactionsPage: NextPage = () => {
           <Button
             onClick={handleOpenNewTransactionModal}
             color="white"
-            bg="red.500"
-          >
+            bg="red.500" >
             Nova Transação
           </Button>
         </Flex>
@@ -151,8 +148,7 @@ export const TransactionsPage: NextPage = () => {
             top="50%"
             left="50%"
             size="lg"
-            color="red.500"
-          />
+            color="red.500" />
         ) : (
           <TableContainer w="100%">
             <Table
@@ -163,8 +159,7 @@ export const TransactionsPage: NextPage = () => {
                 borderCollapse: "separate",
                 borderSpacing: "0 0.5rem",
               }}
-              variant="customTable"
-            >
+              variant="customTable" >
               <Thead>
                 <Tr>
                   <Th>Categoria</Th>
@@ -185,8 +180,7 @@ export const TransactionsPage: NextPage = () => {
                           shadow="md"
                           d="flex"
                           alignItems="center"
-                          justifyContent="center"
-                        >
+                          justifyContent="center" >
                           <Icon as={BsFilter} />
                         </Button>
                       </PopoverTrigger>
@@ -198,8 +192,7 @@ export const TransactionsPage: NextPage = () => {
                           <PopoverBody>
                             <RadioGroup
                               value={transactionFilter}
-                              onChange={setTransactionFilter}
-                            >
+                              onChange={setTransactionFilter} >
                               <Stack>
                                 <Radio value="all" colorScheme="red">
                                   Todos
@@ -208,14 +201,12 @@ export const TransactionsPage: NextPage = () => {
                                   <Radio
                                     key={category.id}
                                     value={category.value}
-                                    colorScheme="red"
-                                  >
+                                    colorScheme="red" >
                                     <Flex align="center">
                                       <CategoryIcon
                                         category={category.value}
                                         fontSize="16px"
-                                        color="black"
-                                      />
+                                        color="black" />
                                       <Text ml="0.5rem">{category.label}</Text>
                                     </Flex>
                                   </Radio>
@@ -235,8 +226,7 @@ export const TransactionsPage: NextPage = () => {
                     <TransactionItem
                       key={transaction.id}
                       transaction={transaction}
-                      onSelectTransaction={setTransactionToEdit}
-                    />
+                      onSelectTransaction={setTransactionToEdit} />
                   ))}
                 </>
               </Tbody>

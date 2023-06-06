@@ -105,8 +105,7 @@ export function EditTransactionModal({
               }
               _focus={{
                 borderBottom: "2px solid #DC1637",
-              }}
-            />
+              }} />
             <CurrencyInput data={price} setData={setPrice} />
             <HStack w="100%">
               <SelectorButton
@@ -114,15 +113,13 @@ export function EditTransactionModal({
                 icon={BsArrowUpCircle}
                 label="Entrada"
                 isActive={isDeposit}
-                onClick={() => setIsDeposit(true)}
-              />
+                onClick={() => setIsDeposit(true)} />
               <SelectorButton
                 color="red.500"
                 icon={BsArrowDownCircle}
                 label="Saída"
                 isActive={!isDeposit}
-                onClick={() => setIsDeposit(false)}
-              />
+                onClick={() => setIsDeposit(false)} />
             </HStack>
             <Select
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
@@ -133,9 +130,7 @@ export function EditTransactionModal({
               data-testid="select"
               value={category}
               _focus={{
-                borderBottom: "2px solid #DC1637",
-              }}
-            >
+                borderBottom: "2px solid #DC1637", }} >
               {categories.map(({ id, label, value }) => (
                 <option key={id} value={value}>
                   {label}
@@ -158,8 +153,7 @@ export function EditTransactionModal({
             color="white"
             leftIcon={<MdSaveAlt />}
             p="24px"
-            onClick={handleEditTransaction}
-          >
+            onClick={handleEditTransaction} >
             Salvar
           </Button>
 
@@ -169,8 +163,7 @@ export function EditTransactionModal({
             color="white"
             leftIcon={<IoTrashOutline />}
             p="24px"
-            onClick={handleDeleteTransaction}
-          >
+            onClick={handleDeleteTransaction} >
             Deletar
           </Button>
         </ModalFooter>

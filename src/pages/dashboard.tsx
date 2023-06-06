@@ -75,8 +75,7 @@ const Dashboard: NextPage = () => {
             base: "column",
             sm: "column",
             md: "row",
-          }}
-        >
+          }} >
           <Flex
             w="100%"
             gap={{ base: "1rem", sm: "1rem", md: "2rem" }}
@@ -86,24 +85,21 @@ const Dashboard: NextPage = () => {
               base: "column",
               sm: "column",
               md: "row",
-            }}
-          >
+            }} >
             <SummaryBox
               title="Depósitos"
               value={totalDeposits}
               bgColor="#FFF"
               textColor="#41414D"
               icon={IoIosArrowDropup}
-              iconColor="green.500"
-            />
+              iconColor="green.500" />
             <SummaryBox
               title="Retiradas"
               value={totalWithdrawals}
               bgColor="#FFF"
               textColor="#41414D"
               icon={IoIosArrowDropdown}
-              iconColor="red.500"
-            />
+              iconColor="red.500" />
             <SummaryBox
               title="Total"
               value={totalDeposits - totalWithdrawals}
@@ -112,8 +108,7 @@ const Dashboard: NextPage = () => {
               }
               textColor="white"
               icon={CgArrowsExchangeV}
-              iconColor="white"
-            />
+              iconColor="white" />
           </Flex>
           <Link href="/transactions" passHref>
             <Button
@@ -122,9 +117,7 @@ const Dashboard: NextPage = () => {
               bg="red.500"
               color="white"
               _hover={{
-                opacity: 0.7,
-              }}
-            >
+                opacity: 0.7 }} >
               Editar transações
             </Button>
           </Link>
@@ -135,8 +128,7 @@ const Dashboard: NextPage = () => {
         gridRowGap="1rem"
         gridColumnGap={{ base: 0, sm: 0, md: "1rem" }}
         px="2rem"
-        py="1rem"
-      >
+        py="1rem" >
         <CategoryChart isDeposit={true} />
         <CategoryChart isDeposit={false} />
         <GridItem colSpan={2} rowStart={[3, 3, 2]}>

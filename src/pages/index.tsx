@@ -55,7 +55,7 @@ const Home: NextPage = () => {
           </Text>
           <Text color="white">Faça login para começar!</Text>
           <Input placeholder='Login'
-            color="white" 
+            color="white"
             required />
           <Input
             pr='4.5rem'
@@ -63,24 +63,38 @@ const Home: NextPage = () => {
             placeholder='Senha'
             color={'white'}
             required />
-          <Button
-            bg="blue"
-            color="white"
-            _hover={{
-              filter: "brightness(0.8)",
-              transition: "0.5s",
-            }}
-            onClick={handleLogin}
-            size="lg">
-            <Text>Entrar</Text>
-          </Button>
+          <Flex>
+            <Button
+              bg="blue"
+              color="white"
+              _hover={{
+                filter: "brightness(0.8)",
+                transition: "0.5s",
+              }}
+              //onClick={handleLogin}
+              size="lg"
+              width={"10em"}>
+              <Text>Entrar</Text>
+            </Button>
+            <Button
+              bg="blue"
+              color="white"
+              _hover={{
+                filter: "brightness(0.8)",
+                transition: "0.5s"}}
+              //onClick={handleLogin}
+              size="lg"
+              width={"10em"}
+              marginLeft={"1em"}>
+              <Text>Cadastrar</Text>
+            </Button>
+          </Flex>
           <Button
             bg="red.500"
             color="white"
             _hover={{
               filter: "brightness(0.8)",
-              transition: "0.5s",
-            }}
+              transition: "0.5s"}}
             onClick={handleLogin}
             size="lg"
             leftIcon={<Icon as={AiOutlineGoogle} />}>
