@@ -54,7 +54,7 @@ const Home: NextPage = () => {
             Bem-vindo
           </Text>
           <Text color="white">Faça login para começar!</Text>
-          <Input placeholder='Login'
+          {/* <Input placeholder='Login'
             color="white"
             required />
           <Input
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
               marginLeft={"1em"}>
               <Text>Cadastrar</Text>
             </Button>
-          </Flex>
+          </Flex> */}
           <Button
             bg="red.500"
             color="white"
