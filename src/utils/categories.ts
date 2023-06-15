@@ -1,4 +1,5 @@
 export const categories = [
+    { id: 0, label: "Salário", value: "salary" },
     { id: 1, label: "Comida", value: "food" },
     { id: 2, label: "Vestuário", value: "clothing" },
     { id: 3, label: "Lazer", value: "entertainment" },
